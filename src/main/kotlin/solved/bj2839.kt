@@ -1,0 +1,5 @@
+package solved
+
+fun main() {
+    
+}

@@ -1,5 +1,7 @@
+import org.jetbrains.kotlin.gradle.dsl.KotlinVersion
+
 plugins {
-    kotlin("jvm") version "1.8.0"
+    kotlin("jvm") version "1.9.10"
     application
 }
 
@@ -19,9 +21,21 @@ tasks.test {
 }
 
 kotlin {
-    jvmToolchain(8)
+    compilerOptions {
+        jvmToolchain(8)
+        languageVersion.set(KotlinVersion.KOTLIN_1_9)
+        apiVersion.set(KotlinVersion.KOTLIN_1_9)
+    }
 }
 
 application {
     mainClass.set("MainKt")
+}
+
+sourceSets {
+    main {
+        kotlin {
+            exclude("solved")
+        }
+    }
 }
