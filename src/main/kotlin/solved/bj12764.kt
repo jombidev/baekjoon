@@ -1,6 +1,6 @@
 package solved//import java.util.PriorityQueue
 //
-//fun main() {
+//fun solved.solved.solved.solved.solved.main() {
 //    val r = System.`in`.bufferedReader()
 //    val N = r.readLine().toInt()
 //    val us = Array(N) { r.readLine().split(' ').map { it.toInt() } }
