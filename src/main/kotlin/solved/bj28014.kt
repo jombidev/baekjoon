@@ -1,3 +1,5 @@
+package solved
+
 fun main() {
     val ln = readln().toInt()
     var l = 1
