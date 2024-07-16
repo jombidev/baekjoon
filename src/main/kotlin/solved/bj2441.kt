@@ -1,4 +1,4 @@
 package solved
 
-val cnt2441=readln().toInt()
-fun main()=repeat(cnt2441){println(" ".repeat(it)+"*".repeat(cnt2441 -it))}
+private val c=readln().toInt()
+fun main()=repeat(c){println(" ".repeat(it)+"*".repeat(c -it))}

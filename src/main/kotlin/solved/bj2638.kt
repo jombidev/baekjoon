@@ -1,7 +1,7 @@
 package solved
 
-var edgeX = 0
-var edgeY = 0
+private var edgeX = 0
+private var edgeY = 0
 fun main() {
     val (X, Y) = readln().split(' ').map { it.toInt() }
     edgeX = X
@@ -20,8 +20,8 @@ fun main() {
 }
 
 fun isEdge(x: Int, y: Int) = x == 0 || x == edgeX - 1 || y == 0 || y == edgeY - 1
-val xPath = listOf(1, -1, 0, 0)
-val yPath = listOf(0, 0, 1, -1)
+private val xPath = listOf(1, -1, 0, 0)
+private val yPath = listOf(0, 0, 1, -1)
 
 fun melt(a: Array<Array<Array<Int>>>) {
     val deq = ArrayDeque(a.flatten().filter { it[0] == 0 && isEdge(it[1], it[2]) })

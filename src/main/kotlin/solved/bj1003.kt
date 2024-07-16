@@ -9,7 +9,7 @@ fun main() {
     }
 }
 
-val fibos = arrayOfNulls<FiboInfo>(41)
+private val fibos = arrayOfNulls<FiboInfo>(41)
 class FiboInfo(val v: Int, val z: Int, val o: Int)
 
 fun fibonacci(n: Int): FiboInfo {

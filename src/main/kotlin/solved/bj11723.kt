@@ -1,8 +1,8 @@
 package solved
 
-val g=java.util.StringTokenizer(System.`in`.reader().readText())
-val r get()= g.nextToken()
-val f get()=1 shl r.toInt()-1
+private val g=java.util.StringTokenizer(System.`in`.reader().readText())
+private val r get()= g.nextToken()
+private val f get()=1 shl r.toInt()-1
 fun main()=with(StringBuilder()){var o=0
 repeat(r.toInt()){when(r){"add"->o=o or f
 "remove"->o=o and f.inv()

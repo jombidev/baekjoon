@@ -1,7 +1,7 @@
 package solved
 
-val d = readln().toInt()
-val e = Array(d) { Array(d * 2 - 1) { '*' } }
+private val d = readln().toInt()
+private val e = Array(d) { Array(d * 2 - 1) { '*' } }
 fun main() = with(StringBuilder()) {
     if (d ==3) return@with print("  *  \n * * \n*****")
     val dh = d * 2 - 1
