@@ -1,3 +1,5 @@
+package solved
+
 fun main() {
     val to = Array(20) { it + 1 }
 
