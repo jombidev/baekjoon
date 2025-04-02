@@ -1,5 +1,3 @@
-package solved
-
 fun main() {
     val m = List(9){readln().toInt()}
     for (i in 0..<9)

@@ -1,5 +1,3 @@
-package solved
-
 import java.util.LinkedList
 
 fun main() {

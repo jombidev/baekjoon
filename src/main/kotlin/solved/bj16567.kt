@@ -1,5 +1,3 @@
-package solved
-
 fun main() {
     val br = System.`in`.bufferedReader()
     val (sz, lines) = br.readLine().split(' ').map { it.toInt() }

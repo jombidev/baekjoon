@@ -1,5 +1,3 @@
-package solved
-
 fun main() {
     for (i in 0 until  readln().toInt()) {
         val points = List(4) { readln().split(' ').map { it.toInt() + 100000 } }

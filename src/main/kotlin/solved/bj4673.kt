@@ -1,5 +1,3 @@
-package solved
-
 fun main() = repeat(10000) { if (b(it + 1)) println(it + 1) }
 fun b(e: Int): Boolean {
     for (i in 1..e) {

@@ -1,5 +1,3 @@
-package solved
-
 fun main() {
     readln()
     val m = readln().split(' ').map { it.toInt() }

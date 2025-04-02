@@ -1,5 +1,3 @@
-package solved
-
 fun main() {
     val m = readln().split(' ').map { it.toInt() }
     val (a, b, c, d, e) = m

@@ -1,5 +1,3 @@
-package solved
-
 fun main() = System.`in`.bufferedReader().forEachLine {
     count = 0
     for (i in 0..<10) {

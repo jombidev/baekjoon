@@ -1,5 +1,3 @@
-package solved
-
 fun main() {
     fibos[0] = FiboInfo(0, 1, 0)
     fibos[1] = FiboInfo(1, 0, 1)

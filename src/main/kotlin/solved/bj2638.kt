@@ -1,5 +1,3 @@
-package solved
-
 private var edgeX = 0
 private var edgeY = 0
 fun main() {

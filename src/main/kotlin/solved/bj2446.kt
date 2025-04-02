@@ -1,5 +1,3 @@
-package solved
-
 fun main() {
     val d = readln().toInt()
     val m = Array(d*2-1) { Array(d*2-1) { '*' } }

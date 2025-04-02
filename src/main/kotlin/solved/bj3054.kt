@@ -1,5 +1,3 @@
-package solved
-
 fun main() {
     val p = "..#..\n.#.#.\n#.\\.#\n.#.#.\n..#.."
     val l = readln()

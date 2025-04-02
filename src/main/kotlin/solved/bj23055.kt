@@ -1,5 +1,3 @@
-package solved
-
 fun main() = with(StringBuilder()) {
     val i = readln().toInt() - 1
     for (j in 0 .. i) {

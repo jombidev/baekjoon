@@ -1,5 +1,3 @@
-package solved
-
 fun main() {
     val mo = "aeiouAEIOU"
     var inp: String

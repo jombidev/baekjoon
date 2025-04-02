@@ -1,5 +1,3 @@
-package solved
-
 fun main() {
     for (i in 0..<readln().toInt()) {
         validate(readln())

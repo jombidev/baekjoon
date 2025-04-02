@@ -1,5 +1,3 @@
-package solved
-
 fun main() {
     val min = readln().toInt()
     val max = readln().toInt()

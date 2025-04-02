@@ -1,5 +1,3 @@
-package solved
-
 fun main() {
     val parser = XmlParser()
     for (s in String(System.`in`.readBytes()).split("\n").dropLastWhile { it.isBlank() }) {

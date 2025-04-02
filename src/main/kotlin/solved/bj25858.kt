@@ -1,5 +1,3 @@
-package solved
-
 fun main() {
     val (n, d) = readln().split(" ").map { it.toInt() }
     val solves = List(n) { readln().toInt() }

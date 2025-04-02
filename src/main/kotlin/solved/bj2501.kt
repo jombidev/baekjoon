@@ -1,5 +1,3 @@
-package solved
-
 fun main() {
     val (n, k) = readln().split(' ').map { it.toInt() }
     var c = 0

@@ -1,5 +1,3 @@
-package solved
-
 fun main() {
     val i = readln().toInt()
     val l = arrayListOf<Pair<Int, Int>>()

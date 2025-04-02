@@ -1,5 +1,3 @@
-package solved
-
 fun main() {
     val t = readln()
     val m = MutableList(10) { scan -> t.count { it - '0' == scan } }

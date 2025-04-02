@@ -1,5 +1,3 @@
-package solved
-
 fun main() {
     readln()
     println(readln().split(' ').filter { it.isNotBlank() }.sortedWith { a, b ->

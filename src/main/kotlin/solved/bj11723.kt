@@ -1,5 +1,3 @@
-package solved
-
 private val g=java.util.StringTokenizer(System.`in`.reader().readText())
 private val r get()= g.nextToken()
 private val f get()=1 shl r.toInt()-1

@@ -1,5 +1,3 @@
-package solved
-
 fun main() {
     val visitSet = hashSetOf("ChongChong")
     for (i in 0..<readln().toInt()) {

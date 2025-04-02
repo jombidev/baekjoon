@@ -1,5 +1,3 @@
-package solved
-
 fun main() {
     readln()
     val o = Array(100) { Array(100) { '#' } }

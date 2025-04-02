@@ -1,5 +1,3 @@
-package solved
-
 fun main() {
     for (i in 0 until readln().toInt()) {
         val l = ArrayDeque(readln().map { C(it, it == '(') })

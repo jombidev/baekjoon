@@ -1,5 +1,3 @@
-package solved
-
 fun main() {
     val (n, m) = readln().ints()
     val o = Array(n) { readln().ints().toTypedArray() }

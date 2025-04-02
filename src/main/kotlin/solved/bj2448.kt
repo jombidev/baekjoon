@@ -1,5 +1,3 @@
-package solved
-
 private val d = readln().toInt()
 private val e = Array(d) { Array(d * 2 - 1) { '*' } }
 fun main() = with(StringBuilder()) {

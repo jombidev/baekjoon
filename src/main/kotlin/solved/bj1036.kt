@@ -1,5 +1,3 @@
-package solved
-
 fun main() {
     val flatten = List(readln().toInt()) { readln().toCharArray() }
     var r = readln().toInt()

@@ -1,5 +1,3 @@
-package solved
-
 fun main() {
     val countX = hashSetOf<Int>()
     val countY = hashSetOf<Int>()

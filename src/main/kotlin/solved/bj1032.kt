@@ -1,5 +1,3 @@
-package solved
-
 fun main() {
     val m = MutableList(readln().toInt()) { readln() }
     val v = m.removeAt(0).toCharArray()

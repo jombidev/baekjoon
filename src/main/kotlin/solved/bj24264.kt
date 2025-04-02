@@ -1,5 +1,3 @@
-package solved
-
 import kotlin.let
 import kotlin.text.toLong
 

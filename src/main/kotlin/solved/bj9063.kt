@@ -1,5 +1,3 @@
-package solved
-
 fun main() {
     val n = List(readln().toInt()) { readln().split(' ').map { it.toInt() } }
     var (maxX, maxY) = List(2){-10001}

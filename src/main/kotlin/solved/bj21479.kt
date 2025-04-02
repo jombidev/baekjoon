@@ -1,5 +1,3 @@
-package solved
-
 fun main() {
     print(String(System.`in`.readBytes()).split(Regex("\r?\n")).filter { it.isNotBlank() }.sortedWith { a, b ->
         val a = a.trim()

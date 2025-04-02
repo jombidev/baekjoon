@@ -1,5 +1,3 @@
-package solved
-
 fun main() {
     val size = readln().toInt()
     val xPath = listOf(1, -1, 0, 0, 1, -1, 1, -1)

@@ -1,5 +1,3 @@
-package solved
-
 fun main() {
     var m = 1.toBigInteger()
     for (l in (2L..readln().toLong())) {

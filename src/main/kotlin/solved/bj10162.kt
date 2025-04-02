@@ -1,5 +1,3 @@
-package solved
-
 fun main() {
     var q = readln().toInt()
     if (q % 10 != 0) return print(-1)

@@ -1,5 +1,3 @@
-package solved
-
 fun main() {
     while (true) {
         val sums = ArrayList<Int>()

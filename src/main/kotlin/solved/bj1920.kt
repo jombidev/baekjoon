@@ -1,5 +1,3 @@
-package solved
-
 fun main() {
     val br = System.`in`.bufferedReader()
     val hashMap = hashMapOf<Int, Boolean>()

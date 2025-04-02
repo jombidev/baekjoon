@@ -1,5 +1,3 @@
-package solved
-
 fun main()=print("""  ___  ___  ___
   | |__| |__| |
   |           |

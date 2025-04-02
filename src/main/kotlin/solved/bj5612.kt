@@ -1,5 +1,3 @@
-package solved
-
 fun main() {
     val n = readln().toInt()
     var i = readln().toInt()

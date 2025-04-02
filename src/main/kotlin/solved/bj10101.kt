@@ -1,5 +1,3 @@
-package solved
-
 fun main() {
     val n = List(3) { readln().toInt() }
     print(

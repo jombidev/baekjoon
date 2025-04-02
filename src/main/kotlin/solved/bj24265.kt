@@ -1,5 +1,3 @@
-package solved
-
 import kotlin.collections.sum
 import kotlin.text.toInt
 
