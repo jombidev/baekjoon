@@ -1,6 +1,7 @@
 import org.jetbrains.kotlin.gradle.dsl.KotlinVersion
 
 plugins {
+    java
     kotlin("jvm") version "1.9.10"
     application
 }
