@@ -1,2 +1,1 @@
-val f=readln().toInt()
-fun main()=print(if(f<2)1 else(2..f).reduce{a,b->a*b})
+fun main()=print(List(readln().toInt()){it+1}.reduceOrNull{a,b->a*b}?:1)
