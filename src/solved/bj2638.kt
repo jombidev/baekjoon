@@ -1,42 +1,72 @@
-private var edgeX = 0
-private var edgeY = 0
+import java.util.LinkedList
+
 fun main() {
-    val (X, Y) = readln().split(' ').map { it.toInt() }
-    edgeX = X
-    edgeY = Y
-    val cheeses =
-        Array(X) { readln().split(' ').map { it.toInt() }.mapIndexed { i, j -> arrayOf(j, i, it) }.toTypedArray() }
-    var days = 0
-    while (cheeses.flatten().any { it[0] == 1 }) {
-        println(cheeses.joinToString("\n") { it.joinToString(" ") { "${it[0]}" } })
-        println()
+    val (n, m) = readln().split(' ').map { it.toInt() }
+    val c = Array(n) { readln().split(' ').map { it.toInt() }.toTypedArray() }
+    val dx = arrayOf(1, -1, 0, 0)
+    val dy = arrayOf(0, 0, 1, -1)
 
-        melt(cheeses)
-        ++days
+    var age = 0
+
+    val empty = LinkedList<Pair<Int, Int>>() // x to y
+    for (i in 0..<n) {
+        empty.add(0 to i)
+        empty.add(m - 1 to i)
     }
-    print(days)
-}
+    for (i in 0..<m) {
+        empty.add(i to 0)
+        empty.add(i to n - 1)
+    }
 
-fun isEdge(x: Int, y: Int) = x == 0 || x == edgeX - 1 || y == 0 || y == edgeY - 1
-private val xPath = listOf(1, -1, 0, 0)
-private val yPath = listOf(0, 0, 1, -1)
+    val ones = ArrayList<Pair<Int, Int>>()
+    for (i in 0..<n) for (j in 0..<m) if (c[i][j] == 1) // n^2???!?!?
+        ones.add(j to i)
 
-fun melt(a: Array<Array<Array<Int>>>) {
-    val deq = ArrayDeque(a.flatten().filter { it[0] == 0 && isEdge(it[1], it[2]) })
-    val visited = Array(edgeX) { Array(edgeY) { false } }
-    val cheeses = ArrayDeque<Array<Int>>()
-    while (deq.isNotEmpty()) {
-        val (_, x, y) = deq.removeFirst()
+    while (ones.isNotEmpty()) {
+        while (empty.isNotEmpty()) { // empty cleaning bfs
+            val (x, y) = empty.removeFirst()
 
-        for (z in xPath.indices) {
-            val xp = x + xPath[z]
-            val yp = y + yPath[z]
-            if (xp !in 0 until edgeY || yp !in 0 until edgeX || a[yp][xp][0] == 0 && visited[yp][xp]) continue
-            val e = a[yp][xp]
-            visited[yp][xp] = true
-            (if (e[0] == 1) cheeses else deq).addLast(e)
+            if (c[y][x] != 0)
+                continue
+
+            c[y][x] = -1 // outside mark
+
+            for (i in 0..<4) {
+                val ox = x + dx[i]
+                val oy = y + dy[i]
+
+                if (ox !in 0..<m || oy !in 0..<n || c[oy][ox] != 0)
+                    continue
+
+                empty.add(ox to oy)
+            }
         }
+
+        for (p in ones) {
+            val (x, y) = p
+
+            var cnt = 0
+
+            for (i in 0..<4) {
+                val ox = x + dx[i]
+                val oy = y + dy[i]
+
+                if (ox !in 0..<m || oy !in 0..<n || c[oy][ox] != -1)
+                    continue
+
+                cnt++
+            }
+
+            if (cnt >= 2) empty.add(p)
+        }
+
+        for ((x, y) in empty) {
+            c[y][x] = 0
+            ones.remove(x to y)
+        }
+
+        age++
     }
 
-    for ((_, x, y) in cheeses.filter { cheeses.count { c -> c.contentEquals(it) } >= 2 }.toSet()) a[y][x][0] = 0
+    print(age)
 }
