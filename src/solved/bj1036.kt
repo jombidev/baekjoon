@@ -1,16 +1,34 @@
-fun main() {
-    val flatten = List(readln().toInt()) { readln().toCharArray() }
-    var r = readln().toInt()
-    while (r > 0) {
-        val m = flatten.sortedByDescending { it.size + 1.0 / it.joinToString("").toLong(36) }
-        while (true) {
+import java.math.BigInteger
+import java.util.PriorityQueue
 
-            val e = m.firstOrNull { it.none { it != 'Z' } } ?: break
-            e[e.indexOfFirst { it != 'Z' }] = 'Z'
-            break
+fun main() {
+    val n = readln().toInt()
+
+    val m = Array(n) { readln() }
+    val ch = BooleanArray(36)
+    ch[35] = true // Z
+    val pq = PriorityQueue<Pair<BigInteger, Char>>(compareBy { -it.first })
+
+    var c = readln().toInt()
+
+    while (c-- > 0) {
+        pq.clear()
+        for (i in 0..<36) {
+            if (ch[i]) continue
+            val c = i.toString(36)[0].uppercaseChar()
+
+            pq.add(m.sumOf { it.replace(c, 'Z').toBigInteger(36) } to c)
         }
-        r--
+
+        if (pq.isEmpty()) break
+
+        val (_, mch) = pq.remove()
+        ch[mch.digitToInt(36)] = true
+
+        for (i in m.indices) {
+            m[i] = m[i].replace(mch, 'Z')
+        }
     }
-    println(flatten.map { it.joinToString("") })
-    println(flatten.sumOf { it.joinToString("").toBigInteger(36) }.toString(36))
+
+    print(m.sumOf { it.toBigInteger(36) }.toString(36).uppercase())
 }
